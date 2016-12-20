@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="yolaslo.opticalcntrex.OpticalFiberCount">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_gravity="center|bottom">
+    </com.google.android.gms.ads.AdView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="0">
+            <TableRow android:layout_width="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewstartcount"
+                    android:id="@+id/textView1"
+                    tools:layout_span="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+            <TableRow android:layout_width="match_parent">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:id="@+id/editTextstartcount"
+                    android:inputType="numberDecimal"
+                    android:text="@string/editTextstartcount"
+                    android:focusable="true"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:background="@android:drawable/editbox_background" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:id="@+id/decreasestartButton"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/btn_default" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:id="@+id/increasestartButton"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/btn_default" />
+
+            </TableRow>
+            <TableRow android:layout_width="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewinstallcount"
+                    android:id="@+id/textView2"
+                    tools:layout_span="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:id="@+id/editTextinstallcount"
+                    android:inputType="numberDecimal"
+                    android:text="@string/editTextinstallcount"
+                    android:focusable = "true"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/editbox_background" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:id="@+id/decreaseinstallButton"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/btn_default" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:id="@+id/increaseinstallButton"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/btn_default" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewcorrectedcount"
+                    android:id="@+id/textView3"
+                    tools:layout_span="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextcorrectedcount"
+                    android:text="@string/editTextcorrectedcount"
+                    android:textIsSelectable="false"
+                    android:inputType="none"
+                    android:ems="8"
+                    android:editable="false"
+                    android:elegantTextHeight="false"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/editbox_background" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextfibercolor"
+                    android:text="@string/editColorfiber"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:background="@color/blue"
+                    android:editable="false"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_span="2"
+                    android:textColor="@color/black" />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewseriesnumber"
+                    android:id="@+id/textView4"
+                    tools:layout_span="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+            <TableRow>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextseriesnumber"
+                    android:text="@string/editTextseriesnumber"
+                    android:inputType="none"
+                    android:textIsSelectable="false"
+                    android:ems="8"
+                    android:editable="false"
+                    android:elegantTextHeight="false"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/editbox_background" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTexttubecolor"
+                    android:text="@string/editColortube"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:background="@color/blue"
+                    android:editable="false"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:layout_span="2"
+                    android:textColor="@color/black"  />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewtubenumber"
+                    android:id="@+id/textView5"
+                    tools:layout_span="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTexttubenumber"
+                    android:text="@string/editTexttubenumber"
+                    android:inputType="none"
+                    android:textIsSelectable="false"
+                    android:ems="8"
+                    android:editable="false"
+                    android:elegantTextHeight="false"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/editbox_background" />
+
+                <View
+                    android:id="@+id/editSpaceabove"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@color/blue" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewfibernumber"
+                    android:id="@+id/textView6"
+                    tools:layout_span="1"
+                    android:textColor="@color/black" />
+                <View
+                    android:id="@+id/editSpacemiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@color/blue" />
+            </TableRow>
+            <TableRow>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextfibernumber"
+                    android:text="@string/editTextfibernumber"
+                    android:inputType="none"
+                    android:textIsSelectable="false"
+                    android:ems="8"
+                    android:editable="false"
+                    android:elegantTextHeight="false"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:background="@android:drawable/editbox_background"/>
+                <View
+                    android:id="@+id/editSpacebottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@color/blue" />
+            </TableRow>
+            <TableRow>
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

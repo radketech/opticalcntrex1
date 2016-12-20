@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aboutText"
+        android:id="@+id/abouttextView"
+        android:textSize="27dp" />
+ <!--  <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ratemeText"
+        android:id="@+id/ratemebutton"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:padding="25dp"
+        android:onClick="rateme"/>
+-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continuebuttonText"
+        android:id="@+id/continuebutton"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:padding="25dp"
+        android:onClick="continuebutt"/>
+</LinearLayout>
